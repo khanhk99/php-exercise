@@ -1,0 +1,6 @@
+PHP training 1
+Tạo trang quản lý sản phẩm dựa trên bài tập SQL bao gồm các chức năng:
+Giao diện thêm sản phẩm, category, tag
+Giao diện hiển thị danh sách sản phẩm: có thể phân trang. lọc sản phẩm theo giá, category, tags, ngày thêm. tìm kiếm sản phẩm. sắp xếp theo tên, giá, ngày thêm
+Có thể sửa, xóa sản phẩm
+Yêu cầu kiểm tra dữ liệu nhập vào trước khi lưu vào database.

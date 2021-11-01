@@ -1,0 +1,226 @@
+@font-face {
+    font-family: "IcoFont";
+    font-weight: normal;
+    font-style: "Regular";
+    src: url("../fonts/icofont.woff2") format("woff2"), url("../fonts/icofont.woff") format("woff");
+}
+
+[class^="icofont-"], [class*=" icofont-"] {
+    font-family: 'IcoFont' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.icofont-search-1:before {
+    content: "\ed11";
+}
+
+.icofont-edit:before {
+    content: "\ef10";
+}
+
+.icofont-ui-delete:before {
+    content: "\ec53";
+}
+
+.icofont-arrow-left:before {
+    content: "\ea5c";
+}
+
+.icofont-arrow-right:before {
+    content: "\ea5d";
+}
+
+.icofont-dollar:before {
+    content: "\e9d8";
+}
+
+.feature .columns .column{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.feature .columns .column .icon.input{
+    width: 100%;
+}
+
+.header input, .header select{
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    max-width: 100px;
+}
+
+.filter{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search{
+    margin-top: 15px;
+}
+
+.header{
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.pages a{
+    margin-bottom: 5px !important;
+}
+
+.datas table img{
+    max-width: 100px;
+    margin-bottom: 5px;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.align-item-center{
+    align-items: center;
+}
+
+.galleries{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 100;
+    top: 0;
+}
+
+.close-galleries{
+    text-align: right;
+}
+
+.data-galleries{
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.pagination{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.main{
+    padding-bottom: 40px;
+}
+
+.error-field{
+    color: red;
+}
+
+.success-message{
+    background-color: #04b304;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.error-message{
+    background-color: red;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.success-message p, .error-message p{
+    padding: 15px 20px;
+    animation: 2s;
+}
+
+.field-option{
+    padding: 30px 0px 20px 0px !important;
+}
+
+.field-option .add-field{
+    margin-bottom: 15px;
+}
+
+.field-option .add-field button{
+    width: 100%;
+    text-align: left;
+}
+
+.main-data{
+    border-left: 1px solid #c7c7c7;
+    padding: 30px 20px 40px 30px !important;
+}
+
+
+.main-data .data-item{
+    border: 1px solid #c7c7c7;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.title-field{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.title-field button{
+    padding: 1px 2px !important;
+}
+
+.data-item table{
+    border-collapse: separate; 
+    border-spacing: 0 1em;
+}
+
+.data-item .attr-name{
+    padding-right: 40px;
+}
+
+.data-item .attr-value{
+    width: 100%;
+}
+
+input, select{
+    border: 2px solid #c7c7c7;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.data-item .attr-value input[type=text], .data-item .attr-value input[type=number], .data-item .attr-value select{
+    width: 100%;
+}
+
+.data-item .attr-value select{
+    text-transform: capitalize;
+}
+
+.error{
+    color: red;
+}
+
+.suggestion{
+    color: #7b7b7b;
+    font-size: 14px;
+}
+
+.field-galleries img{
+    max-width: 200px;
+}
