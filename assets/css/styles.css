@@ -63,7 +63,6 @@
     border: 1px solid #ccc;
     padding: 5px 10px;
     border-radius: 5px;
-    max-width: 100px;
 }
 
 .filter{
@@ -223,4 +222,35 @@ input, select{
 
 .field-galleries img{
     max-width: 200px;
+}
+
+.list-product-search{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: #b3b3b3;
+}
+
+.list-product-search ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.list-product-search ul a{
+    color: #000;
+}
+
+.list-product-search ul li{
+    padding: 8px 10px;
+}
+
+.list-product-search ul li:hover{
+    cursor: pointer;
+    background-color: #737373;
+    color: #fff;
+}
+
+.list-product-search ul li:hover a{
+    color: #fff;
 }

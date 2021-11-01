@@ -29,7 +29,7 @@ class Product extends Validate
                 "type" => PDO::PARAM_INT
             )
         );
-        $products = $this->executeParam($sql, $param, PDO::PARAM_INT);
+        $products = $this->executeParam($sql, $param);
 
         return array("products" => $products, "total_page" => $total_page);
     }

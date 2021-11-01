@@ -78,10 +78,10 @@ class Term extends Validate
     }
     
     public function getCategory(){
-
+        return $this->executeNoParam("SELECT * FROM `terms` WHERE `type` = 1");
     }
 
     public function getTag(){
-
+        return $this->executeNoParam("SELECT * FROM `terms` WHERE `type` = 2");
     }
 }

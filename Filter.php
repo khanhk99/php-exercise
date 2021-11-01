@@ -1,5 +1,6 @@
 <?php
 include_once './DBconnect.php';
+include_once './Term.php';
 
 class Filter extends DBconnection
 {
@@ -32,7 +33,47 @@ class Filter extends DBconnection
                 "type" => PDO::PARAM_INT
             )
         );
-        $products = $this->executeParam($sql, $param, PDO::PARAM_INT);
+        $products = $this->executeParam($sql, $param);
         return array("products" => $products, "total_page" => $total_page);
+    }
+
+    public function filterSearch()
+    {
+        $category_filter = $_GET['categoryFilter'];
+        $tag_filter = $_GET['tagFilter'];
+        $start_date_filter = !empty($_GET['startDateFilter']) ? (string)$_GET['startDateFilter'] : "1970-01-01";
+        $end_date_filter = !empty($_GET['endDateFilter']) ? (string)$_GET['endDateFilter'] : date("Y-m-d");
+
+        $sql_paginate = "SELECT * FROM `products`
+        INNER JOIN `term_relationship` ON `products`.`ID` = `term_relationship`.`product_id` 
+        WHERE ((`term_relationship`.`foreign_id` = $category_filter) OR (`term_relationship`.`foreign_id` = $tag_filter)) 
+        AND (`products`.`created_date` >= :start_date_filter) 
+        AND (`products`.`created_date` <= :end_date_filter) 
+        GROUP BY sku
+        ";
+        $params_paginate =  array(
+            ":start_date_filter" => array(
+                "data" => $start_date_filter,
+                "type" => PDO::PARAM_STR
+            ),
+            ":end_date_filter" => array(
+                "data" => $end_date_filter,
+                "type" => PDO::PARAM_STR
+            ),
+        );
+        $products = $this->executeParam($sql_paginate, $params_paginate);
+
+        return array("products" => $products, "total_page" => 0);
+    }
+
+    public function searchProduct($title){
+        $sql = "SELECT id, title FROM `products` WHERE title LIKE '%$title%'";
+        $products = $this->executeNoParam($sql);
+        $html = "";
+        
+        foreach($products as $product){
+            $html .= '<li><a href="#">'. $product['title'] . '</a></li>';
+        }
+        return $html;
     }
 }
